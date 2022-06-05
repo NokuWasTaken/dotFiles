@@ -28,17 +28,17 @@ Plug 'ryanoasis/vim-devicons'  						" Icons for NERDTree
 
 "{{Syntax Higlighting, colors and autoFill }}"
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}				" autoFill plugin
-Plug 'github/copilot.vim' 						" GitHub Copilot
-Plug 'preservim/nerdcommenter'   					" Commenting
-Plug 'dag/vim-fish'							" .fish file higlighting
-Plug 'junegunn/vim-emoji'						" Vim emojis
-Plug 'dracula/vim', { 'as': 'dracula' }					" Vim colorsheme
+Plug 'neoclide/coc.nvim', {'branch': 'release'}	" autoFill plugin
+Plug 'github/copilot.vim' 				" GitHub Copilot
+Plug 'preservim/nerdcommenter'   		" Commenting
+Plug 'dag/vim-fish'						" .fish file higlighting
+Plug 'https://gitlab.com/gi1242/vim-emoji-ab' " Vim emojis
+Plug 'dracula/vim', { 'as': 'dracula' }	" Vim colorsheme
 
 "{{ snippets }}"
 
-Plug 'SirVer/ultisnips'							" ultisnipps
-Plug 'honza/vim-snippets' 						" vim-snippets
+Plug 'SirVer/ultisnips'					" ultisnipps
+Plug 'honza/vim-snippets' 				" vim-snippets
 
 call plug#end()
 
@@ -46,10 +46,10 @@ call plug#end()
 " => General Vim Settings
 """""""""""""""""""""""""""""""""""
 
-set number relativenumber 						" Display line numbers
-set clipboard=unnamedplus						" Copy/Paste between vim and other programs.
-set noswapfile								" No swap
-set nobackup 								" No backup
+set number relativenumber 				" Display line numbers
+set clipboard=unnamedplus				" Copy/Paste between vim and other programs.
+set noswapfile							" No swap
+set nobackup 							" No backup
 set hidden								" needed to keep multiple buffers open
 
 """""""""""""""""""""""""""""""""""
@@ -82,6 +82,7 @@ set expandtab                   					" Use spaces instead of tabs.
 set smarttab                    					" Be smart using tabs ;)
 set shiftwidth=4                					" One tab == four spaces.
 set tabstop=4                   					" One tab == four spaces.
+set completefunc=emoji#complete                     " add emoji completition
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree
@@ -160,3 +161,4 @@ nmap <leader>0 <Plug>BuffetSwitch(10)
 """""""""""""""""""""""""""""""""""
 
 let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks") " add NERDTree Bookmarks to startify
+
